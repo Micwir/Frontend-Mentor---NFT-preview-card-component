@@ -57,13 +57,50 @@ main section {
 }
 
 .product-image-container{  
+    position: relative;
     display: flex;   
     border-radius: 20px;     
     overflow: hidden;
 }
 
+.product-image-container:hover {
+    background-image: url(../images/icon-view.svg);
+    background-color: hsl(178, 100%, 50%); 
+}
+
 .product-image-container > img {
-    width: 100%;    
+    width: 100%;       
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.product-image-container:hover .overlay,
+.product-image-container:active .overlay {
+    opacity: 1;    
+}
+
+.product-section h1 {
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+}
+
+
+.product-section h1:hover {
+    color: hsl(178, 100%, 50%);
+
 }
 
 .information-container {    
@@ -100,6 +137,12 @@ main section {
 
 .creator-name {
     color: white;
+    transition: color 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.creator-name:hover {
+    color: hsl(178, 100%, 50%);
 }
 
 
