@@ -17,6 +17,10 @@ body {
     
 }
 
+body a {
+    text-decoration: none;    
+}
+
 body p {
     margin: 0;
     font-size: 18px;
@@ -27,9 +31,10 @@ body p {
 body h1 {
     margin: 0;
     font-weight: 600;
+    color: white;
 }
 
-body a{
+body a p{
     color: white;
     transition: color 0.5s ease-in-out;
     text-decoration: none;
